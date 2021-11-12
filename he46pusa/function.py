@@ -4,6 +4,8 @@ from PIL import Image
 
 def imshow(X, resize=None):
     X_new = Image.fromarray(X)
+    if resize == None: #no resizing
+        return X_new
     try:
         X_new = X_new.resize(resize)
     except:
